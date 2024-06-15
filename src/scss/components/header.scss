@@ -52,3 +52,15 @@ header {
     color: $main-color;
   }
 }
+
+.nav__list-item:last-of-type {
+  position: relative;
+  &::after {
+    content: "*";
+    color: $accent-color;
+    font-size: 16px;
+    position: absolute;
+    top: -6px;
+    right: -14px;
+  }
+}
