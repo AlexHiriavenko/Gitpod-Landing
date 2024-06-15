@@ -1,5 +1,8 @@
-.banner {
+#banner-section {
   margin-top: 32px;
+}
+
+.banner {
   @include center-flex;
   column-gap: 50px;
 }
