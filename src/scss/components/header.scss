@@ -1,6 +1,54 @@
 header {
+  padding: 20px 32px;
   color: #fff;
-  background-color: $secondary-color;
+  height: 80px;
   min-height: 80px;
   text-align: center;
+  @include sb-flex;
+}
+
+.nav__list {
+  @include center-flex;
+  column-gap: 48px;
+}
+
+.nav__link {
+  position: relative;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $main-color;
+  transition-duration: 0.5s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: $accent-color;
+    transition-duration: 0.8s;
+  }
+
+  &:hover {
+    color: $accent-color;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.btn-login {
+  padding: 6px 23px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.43;
+  background: #12100c;
+  color: #f9f9f9;
+  transition-duration: 0.5s;
+  &:hover {
+    background-color: $accent-color;
+    color: $main-color;
+  }
 }

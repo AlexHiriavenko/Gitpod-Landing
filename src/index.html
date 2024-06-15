@@ -2,9 +2,10 @@
 <html lang="en">
   @@include('html/head.html', {"title":"Gitpod"})
   <body>
-    @@include('html/Header.html', {}) 
-    @@include('html/Main.html', {})
-    @@include('html/Footer.html', {})
+    <div class="app-container">
+      @@include('html/Header.html', {}) @@include('html/Main.html', {})
+      @@include('html/Footer.html', {})
+    </div>
     <script type="module" src="./dist/js/app.min.js"></script>
   </body>
 </html>
