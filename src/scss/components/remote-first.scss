@@ -41,6 +41,10 @@
   line-height: 177%;
   text-align: center;
   height: 47px;
+  transition-duration: 0.5s;
+  &:hover {
+    border-color: #fff;
+  }
   &:first-of-type {
     width: 207px;
   }
