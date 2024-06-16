@@ -43,6 +43,7 @@
   height: 47px;
   transition-duration: 0.5s;
   &:hover {
+    border-radius: 9px;
     border-color: #fff;
   }
   &:first-of-type {

@@ -14,7 +14,7 @@ global.app = {
 };
 
 // импотры тасков
-// import { copy } from "./gulp/tasks/copy.js";
+import { copy } from "./gulp/tasks/copy.js";
 import { clear } from "./gulp/tasks/clear.js";
 import { html } from "./gulp/tasks/html.js";
 import { server } from "./gulp/tasks/server.js";
@@ -26,6 +26,7 @@ import { images } from "./gulp/tasks/images.js";
 // функция наблюдатель, где
 // watch(path, instruction) путь к файлам, инструкция выполнить функцию при изменении исходников.
 function watcher() {
+  gulp.watch(path.watch.mocData, copy);
   gulp.watch(path.watch.html, html);
   gulp.watch(path.watch.scss, scss);
   gulp.watch(path.watch.js, js);
@@ -36,7 +37,7 @@ function watcher() {
 // const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle); // вариант со шрифтами
 
 // перечень тасков - выполняем параллельно (одновременно, асинхронно)
-const tasks = gulp.parallel(html, scss, js, images);
+const tasks = gulp.parallel(copy, html, scss, js, images);
 // const tasks = gulp.series(fonts, gulp.parallel(html, scss, js, images)); // вариант со шрифтами
 
 // основной сценарий - выполняем последовательно очистить dist, запустить таски, и асинхронно наблюдатель + лайвсервер.
