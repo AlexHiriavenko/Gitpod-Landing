@@ -1,4 +1,5 @@
 import { burger, burgerBtn } from "../variables/variables.js";
+import closeBurger from "./closeBurger.js";
 import navLinkClick from "./navLinkClick.js";
 
 function documentClick(event) {
