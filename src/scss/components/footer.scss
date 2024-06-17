@@ -32,6 +32,18 @@
   text-align: left;
 }
 
+.footer__list li.star {
+  position: relative;
+  &::after {
+    content: "*";
+    color: $accent-color;
+    font-size: 16px;
+    position: absolute;
+    top: -10px;
+    right: 4px;
+  }
+}
+
 .footer__list li:first-of-type {
   font-weight: 700;
   font-size: 13px;
