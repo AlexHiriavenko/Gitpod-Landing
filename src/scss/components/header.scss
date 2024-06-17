@@ -6,7 +6,6 @@ header {
   text-align: center;
   @include sb-flex;
   position: relative;
-  // overflow-y: hidden;
 }
 
 .nav__list {
@@ -17,7 +16,7 @@ header {
 .nav__link {
   position: relative;
   display: inline-block;
-  width: 100%;
+  width: max-content;
   font-size: 16px;
   line-height: 1.5;
   color: $main-color;
@@ -81,7 +80,7 @@ header .btn-group {
 /////////////  medium screen ////////////////
 
 @include mid-screen() {
-  .header-burger {
+  .btn-burger {
     display: flex;
     width: 36px;
     height: 36px;
@@ -101,13 +100,15 @@ header .btn-group {
       transition-duration: 0.64s;
     }
 
-    &__line.top.opened {
-      transform: translateY(5px) rotate(45deg);
-    }
+    &.opened {
+      .btn-burger__line.top {
+        transform: translateY(5px) rotate(45deg);
+      }
 
-    &__line.bottom.opened {
-      transform: translateY(-5px) rotate(-45deg);
-      margin-top: 1.3px;
+      .btn-burger__line.bottom {
+        transform: translateY(-5px) rotate(-45deg);
+        margin-top: 1.3px;
+      }
     }
   }
 
@@ -138,5 +139,11 @@ header .btn-group {
 
   nav.active {
     height: 260px;
+  }
+  .nav__list-item:last-of-type {
+    &::after {
+      top: -2px;
+      right: 36px;
+    }
   }
 }

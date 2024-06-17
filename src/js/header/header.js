@@ -1,15 +1,23 @@
-const burgerBtn = document.querySelector(".header-burger");
-const nav = document.querySelector("header nav");
+import { appState } from "../appState.js";
+import openBurger from "./functions/openBurger.js";
+import closeBurger from "./functions/closeBurger.js";
+import navLinkClick from "./functions/navLinkClick.js";
+import documentClick from "./functions/documentClick.js";
+import { burgerBtn, burger } from "./variables/variables.js";
 
-function toggleBurger(event) {
+function setBurger(event) {
   const target = event.target.closest("button");
   if (target) {
-    if (nav.matches(".active")) {
-      nav.classList.remove("active");
+    if (appState.isBurgerOpen) {
+      closeBurger();
+      burger.removeEventListener("click", navLinkClick);
+      document.removeEventListener("click", documentClick);
     } else {
-      nav.classList.add("active");
+      openBurger();
+      burger.addEventListener("click", navLinkClick);
+      document.addEventListener("click", documentClick);
     }
   }
 }
 
-burgerBtn.addEventListener("click", toggleBurger);
+burgerBtn.addEventListener("click", setBurger);
