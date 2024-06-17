@@ -581,18 +581,17 @@ main {
   height: 47px;
   -webkit-box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.1);
+  top: -2px;
+  right: -2px;
+  height: 48px;
 }
 
 .ellipse.chrome {
-  top: -2px;
-  right: -2px;
   width: 207px;
 }
 
 .ellipse.fox {
   width: 200px;
-  top: -2px;
-  right: -2px;
 }
 
 #testimonials-section {
