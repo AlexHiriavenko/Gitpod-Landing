@@ -1,12 +1,12 @@
 html {
   max-width: 100vw;
+  min-width: 100vw;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   color: $main-color;
   background-color: lightgray;
-  max-width: 100vw;
   line-height: 1;
 }
 
