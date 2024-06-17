@@ -8,6 +8,7 @@
     "dev": "gulp",
     "product": "gulp product --product",
     "delDist": "gulp delDist --delDist",
+    "deploy": "mkdir -p temp && cp index.html temp/ && cp -r dist temp/ && npx gh-pages -d temp && rm -rf temp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -49,5 +50,8 @@
     "sass": "^1.58.1",
     "webpack": "^5.75.0",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
