@@ -8,7 +8,7 @@
     "dev": "gulp",
     "product": "gulp product --product",
     "delDist": "gulp delDist --delDist",
-    "deploy": "mkdir -p temp && cp index.html temp/ && cp -r dist temp/ && npx gh-pages -d temp && rm -rf temp",
+    "deploy": "mkdir temp && cp index.html temp/ && cp -r dist temp/ && npx gh-pages -d temp && rm -rf temp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
