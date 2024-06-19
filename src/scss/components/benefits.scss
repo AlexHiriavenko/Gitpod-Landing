@@ -4,7 +4,7 @@
 }
 
 .benefits__text {
-  font-size: 54px;
+  font-size: calc((100vw - 768px) / (1440 - 768) * (54 - 36) + 36px);
   line-height: 118%;
   text-align: center;
 }
@@ -16,4 +16,10 @@
 .benefits__text--secondary {
   text-decoration: line-through;
   color: #999795;
+}
+
+@include mid-screen() {
+  #benefits-section {
+    margin-top: 0;
+  }
 }

@@ -75,3 +75,13 @@
 .ellipse.fox {
   width: 200px;
 }
+
+@include mid-screen() {
+  #remote-first-section {
+    margin-top: 120px;
+  }
+
+  .remote-first__title {
+    font-size: calc((100vw - 768px) / (1100 - 768) * (54 - 42) + 42px);
+  }
+}

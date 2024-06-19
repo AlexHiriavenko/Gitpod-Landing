@@ -6,6 +6,7 @@
 .ci-cd {
   @include center-flex;
   column-gap: 66px;
+  row-gap: 66px;
 }
 
 .ci-cd__left {
@@ -58,5 +59,30 @@
   width: 46%;
   img {
     max-width: 100%;
+  }
+}
+
+@include mid-screen() {
+  #CI-CD-section {
+    margin-top: 0;
+    padding-block: 40px;
+  }
+
+  .ci-cd {
+    flex-wrap: wrap;
+  }
+
+  .ci-cd__left,
+  .ci-cd__right {
+    width: 100%;
+  }
+
+  .ci-cd__left .ci-cd__title {
+    text-align: center;
+  }
+
+  .ci-cd__left .ci-cd__links {
+    margin-top: 40px;
+    justify-content: center;
   }
 }
