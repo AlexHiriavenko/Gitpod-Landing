@@ -82,6 +82,8 @@
   }
 }
 
+///////////////////  adaptive ///////////////////////
+
 @include mid-screen() {
   .banner {
     flex-direction: column;
@@ -122,5 +124,27 @@
 @include tablet-screen() {
   .banner__left .banner__text {
     font-size: 21px;
+  }
+}
+
+@include mobile-screen() {
+  .banner__left {
+    .banner__text {
+      font-size: 20px;
+    }
+  }
+
+  .banner .try-now__container {
+    flex-direction: column-reverse;
+    align-items: center;
+    row-gap: 16px;
+  }
+
+  .banner .try-now__text {
+    text-align: center;
+  }
+
+  .banner__right .banner__img {
+    max-width: 90%;
   }
 }

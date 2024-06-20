@@ -68,3 +68,38 @@
     column-gap: 16px;
   }
 }
+
+@include mid-screen() {
+  .footer__container,
+  .social-container {
+    width: 100%;
+    max-width: 768px;
+    padding-inline: 42px;
+  }
+
+  .footer__container::after {
+    width: calc(100% - 84px);
+    right: 42px;
+  }
+}
+
+@include tablet-screen() {
+  .footer__container,
+  .social-container {
+    padding-inline: 32px;
+  }
+}
+
+@include mobile-screen() {
+  .footer__container,
+  .social-container {
+    padding-inline: 16px;
+  }
+
+  .footer__container {
+  }
+
+  .footer__list {
+    width: 25%;
+  }
+}

@@ -85,3 +85,33 @@
     font-size: calc((100vw - 768px) / (1100 - 768) * (54 - 42) + 42px);
   }
 }
+
+@include tablet-screen() {
+  #remote-first-section {
+    margin-top: 90px;
+  }
+
+  .remote-first__text {
+    font-size: 18px;
+  }
+}
+
+@include mobile-screen() {
+  .remote-first__links {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .remote-first__link {
+    &:first-of-type {
+      width: 207px;
+    }
+    &:last-of-type {
+      width: 207px;
+    }
+  }
+
+  .ellipse.fox {
+    width: 207px;
+  }
+}

@@ -42,10 +42,12 @@
 .workspace {
   width: 50%;
   min-height: 651px;
+  max-height: 655px;
   padding-top: 56px;
   padding-bottom: 88px;
   border-radius: 20px;
   background: #fff;
+  padding-inline: 16px;
 }
 
 .workspace {
@@ -123,4 +125,75 @@
   padding: 8px 12px;
   background-color: $main-color;
   min-width: 141px;
+}
+
+@include mid-screen() {
+  #get-started-section {
+    margin-top: 120px;
+  }
+
+  .get-started__title {
+    font-size: calc((100vw - 768px) / (1100 - 768) * (54 - 42) + 42px);
+  }
+
+  .get-started__container {
+    flex-direction: column;
+    row-gap: 36px;
+  }
+
+  .git,
+  .workspace {
+    width: 70%;
+    max-width: 640px;
+  }
+
+  .get-started__subtitle {
+    font-size: 28px;
+  }
+
+  .get-started__text {
+    font-size: 20px;
+  }
+
+  .workspace__options-item > span {
+    font-size: 17px;
+    column-gap: 8px;
+  }
+}
+
+@include tablet-screen() {
+  .git,
+  .workspace {
+    width: 96%;
+  }
+
+  .workspace__options-item > span {
+    font-size: 16px;
+    column-gap: 8px;
+  }
+}
+
+@include mobile-screen() {
+  .get-started__subtitle {
+    font-size: 22px;
+  }
+  .get-started__text {
+    font-size: 18px;
+  }
+
+  .git__link {
+    width: 220px;
+    text-align: left;
+    padding-left: 16px;
+  }
+
+  .workspace__options-list {
+    width: 100%;
+  }
+
+  .workspace__options-link {
+    width: 90px;
+    min-width: 90px;
+    height: 46px;
+  }
 }
