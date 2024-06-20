@@ -8,9 +8,9 @@ https://alexhiriavenko.github.io/Gitpod-Landing/
 
 [по этой ссылке](https://www.figma.com/design/qdqYUt3AYbMvDWZsWFVz0f/Gitpod?node-id=1-2&t=bPZPLRrQQzRqS9IY-0)
 
-## Примечание:
+## Adaptive:
 
-ВЕРСТКА ТОЛЬКО ДЛЯ 1440px (за искючением секции header, в этой секции сделано бургер меню).
+320 ; 480; 768; 1100; 1440 px.
 
 ## Как запустить проект:
 
